@@ -1,0 +1,44 @@
+{
+  "name": "@nju33/backlog",
+  "description": "[wip][unofficial] Backlog api client.",
+  "version": "0.0.0",
+  "main": "dist/backlog.js", 
+  "umd:main": "dist/backlog.umd.js",
+  "module": "dist/backlog.m.js",
+  "source": "src/index.ts",
+  "repository": "nju33/backlog.git",
+  "author": "nju33 <nju33.ki@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "microbundle",
+    "test": "jest",
+    "run-example": "ts-node -P tsconfig.example.json",
+    "example.status": "yarn run-example example/status.ts",
+    "example.project": "yarn run-example example/project.ts",
+    "example.issue": "yarn run-example example/issue.ts"
+  },
+  "devDependencies": {
+    "@geekcojp/prettier-config": "^0.2.2",
+    "@geekcojp/tslint-config": "^0.2.1",
+    "@types/axios": "^0.14.0",
+    "@types/dotenv": "^4.0.3",
+    "@types/jest": "^23.3.1",
+    "@types/nock": "^9.3.0",
+    "dotenv": "^6.0.0",
+    "jest": "^23.4.1",
+    "microbundle": "^0.6.0",
+    "nock": "^9.4.3",
+    "prettier": "^1.13.7",
+    "ts-jest": "^23.0.1",
+    "ts-node": "^7.0.0",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
