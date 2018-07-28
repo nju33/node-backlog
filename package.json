@@ -9,11 +9,15 @@
   "repository": "nju33/backlog.git",
   "author": "nju33 <nju33.ki@gmail.com>",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist",
     "src"
   ],
   "scripts": {
+    "prepare": "yarn build",
     "build": "microbundle",
     "test": "jest",
     "run-example": "ts-node -P tsconfig.example.json",
