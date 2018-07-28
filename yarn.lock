@@ -33,11 +33,11 @@
     reflect-metadata "^0.1.12"
     tslib "^1.8.1"
 
-"@geekcojp/prettier-config@^0.2.2":
+"@geekcojp/prettier-config@0.2.2":
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/@geekcojp/prettier-config/-/prettier-config-0.2.2.tgz#a24e73feb98909ac0af16b12c24acb7d4dce1db4"
 
-"@geekcojp/tslint-config@^0.2.1":
+"@geekcojp/tslint-config@0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@geekcojp/tslint-config/-/tslint-config-0.2.1.tgz#2b34c6657c0678adad70d695b2b6a457a78e972c"
   dependencies:
@@ -50,13 +50,13 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@types/axios@^0.14.0":
+"@types/axios@0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@types/axios/-/axios-0.14.0.tgz#ec2300fbe7d7dddd7eb9d3abf87999964cafce46"
   dependencies:
     axios "*"
 
-"@types/dotenv@^4.0.3":
+"@types/dotenv@4.0.3":
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/@types/dotenv/-/dotenv-4.0.3.tgz#ebcfc40da7bc0728b705945b7db48485ec5b4b67"
   dependencies:
@@ -66,11 +66,11 @@
   version "0.0.39"
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.39.tgz#e177e699ee1b8c22d23174caaa7422644389509f"
 
-"@types/jest@^23.3.1":
+"@types/jest@23.3.1":
   version "23.3.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.1.tgz#a4319aedb071d478e6f407d1c4578ec8156829cf"
 
-"@types/nock@^9.3.0":
+"@types/nock@9.3.0":
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@types/nock/-/nock-9.3.0.tgz#9d34358fdcc08afd07144e0784ac9e951d412dd4"
   dependencies:
@@ -1196,7 +1196,7 @@ dot-prop@^4.1.1:
   dependencies:
     is-obj "^1.0.0"
 
-dotenv@^6.0.0:
+dotenv@6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-6.0.0.tgz#24e37c041741c5f4b25324958ebbc34bca965935"
 
@@ -2498,7 +2498,7 @@ jest-worker@^23.2.0:
   dependencies:
     merge-stream "^1.0.1"
 
-jest@^23.4.1:
+jest@23.4.1:
   version "23.4.1"
   resolved "https://registry.yarnpkg.com/jest/-/jest-23.4.1.tgz#39550c72f3237f63ae1b434d8d122cdf6fa007b6"
   dependencies:
@@ -2899,7 +2899,7 @@ merge@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
 
-microbundle@^0.6.0:
+microbundle@0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/microbundle/-/microbundle-0.6.0.tgz#0e1c4a055b90c500d031f28ff518a209bdb93898"
   dependencies:
@@ -3070,7 +3070,7 @@ needle@^2.2.1:
     iconv-lite "^0.4.4"
     sax "^1.2.4"
 
-nock@^9.4.3:
+nock@9.4.3:
   version "9.4.3"
   resolved "https://registry.yarnpkg.com/nock/-/nock-9.4.3.tgz#26bbc1280898f442c9814085f05199cab857a04c"
   dependencies:
@@ -3805,7 +3805,7 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.13.0, prettier@^1.13.7:
+prettier@1.13.7, prettier@^1.13.0, prettier@^1.13.7:
   version "1.13.7"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
 
@@ -4725,7 +4725,7 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-ts-jest@^23.0.1:
+ts-jest@23.0.1:
   version "23.0.1"
   resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-23.0.1.tgz#c90e747b2787d3394319cde77c2748a87aaf2f48"
   dependencies:
@@ -4738,7 +4738,7 @@ ts-jest@^23.0.1:
     pkg-dir "^3.0.0"
     yargs "^12.0.1"
 
-ts-node@^7.0.0:
+ts-node@7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-7.0.0.tgz#a94a13c75e5e1aa6b82814b84c68deb339ba7bff"
   dependencies:
@@ -4793,7 +4793,7 @@ tslint-xo@^0.8.0:
     tslint-eslint-rules "^5.3.1"
     tslint-microsoft-contrib "^5.0.2"
 
-tslint@^5.11.0:
+tslint@5.11.0:
   version "5.11.0"
   resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.11.0.tgz#98f30c02eae3cde7006201e4c33cb08b48581eed"
   dependencies:
@@ -4842,7 +4842,7 @@ type-detect@^4.0.0:
   version "4.0.8"
   resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
 
-typescript@^2.8.3, typescript@^2.9.2:
+typescript@2.9.2, typescript@^2.8.3:
   version "2.9.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.9.2.tgz#1cbf61d05d6b96269244eb6a3bce4bd914e0f00c"
 
