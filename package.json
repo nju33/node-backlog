@@ -1,8 +1,8 @@
 {
   "name": "@nju33/backlog",
   "description": "[wip][unofficial] Backlog api client.",
-  "version": "0.0.0",
-  "main": "dist/backlog.js", 
+  "version": "0.0.1",
+  "main": "dist/backlog.js",
   "umd:main": "dist/backlog.umd.js",
   "module": "dist/backlog.m.js",
   "source": "src/index.ts",
