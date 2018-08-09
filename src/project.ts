@@ -1,50 +1,34 @@
-import {Module} from './module';
+import {BacklogProject} from './project-manager';
+import {BacklogIssueParams} from './issue-manager';
+import {Issue} from './issue';
 
-export interface BacklogProjectParams {
-  archived?: boolean;
-  all?: boolean;
-}
+export class Project {
+  readonly id: number;
+  readonly projectKey: string;
+  readonly name: string;
+  readonly chartEnabled: boolean;
+  readonly subtaskingEnabled: boolean;
+  readonly projectLeaderCanEditProjectLeader: boolean;
+  readonly useWikiTreeView: boolean;
+  readonly textFormattingRule: string;
+  readonly archived: boolean;
+  readonly displayOrder: number;
 
-export interface BacklogProject {
-  id: number;
-  projectKey: string;
-  name: string;
-  chartEnabled: boolean;
-  subtaskingEnabled: boolean;
-  projectLeaderCanEditProjectLeader: boolean;
-  useWikiTreeView: boolean;
-  textFormattingRule: string;
-  archived: boolean;
-  displayOrder: number;
-}
-
-export interface ProjectModule {
-  getProjects(params: BacklogProjectParams): Promise<BacklogProject[]>;
-  getProjectByProjectKey(
-    projectKey: string,
-    params: BacklogProjectParams
-  ): Promise<BacklogProject | undefined>;
-}
-
-export class Project extends Module implements ProjectModule {
-  async getProjects(
-    params: BacklogProjectParams = {}
-  ): Promise<BacklogProject[]> {
-    try {
-      const res = await this.axios.get('projects', {params});
-
-      return res.data;
-    } catch (err) {
-      throw new Error(err.response.data.errors[0].message);
-    }
+  constructor(private readonly projectJson: BacklogProject) {
+    this.id = projectJson.id;
+    this.projectKey = projectJson.projectKey;
+    this.name = projectJson.name;
+    this.chartEnabled = projectJson.chartEnabled;
+    this.subtaskingEnabled = projectJson.subtaskingEnabled;
+    this.projectLeaderCanEditProjectLeader =
+      projectJson.projectLeaderCanEditProjectLeader;
+    this.useWikiTreeView = projectJson.useWikiTreeView;
+    this.textFormattingRule = projectJson.textFormattingRule;
+    this.archived = projectJson.archived;
+    this.displayOrder = projectJson.displayOrder;
   }
 
-  async getProjectByProjectKey(
-    projectKey: string,
-    params: BacklogProjectParams = {}
-  ): Promise<BacklogProject | undefined> {
-    const projects = await this.getProjects(params);
-
-    return projects.find(project => project.projectKey === projectKey);
+  async getIssues(_query: BacklogIssueParams): Promise<Issue[]> {
+    return [] as Issue[];
   }
 }

@@ -1,4 +1,4 @@
-import {Module} from './module';
+import {Manager} from './manager';
 
 export interface BacklogStatus {
   id: number;
@@ -9,7 +9,7 @@ export interface StatusModule {
   getStatuses(): Promise<BacklogStatus[]>;
 }
 
-export class Status extends Module implements StatusModule {
+export class StatusManager extends Manager implements StatusModule {
   async getStatuses(): Promise<BacklogStatus[]> {
     try {
       const res = await this.axios.get('statuses');

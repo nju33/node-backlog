@@ -2,16 +2,16 @@ import {createAxiosInstance} from './axios';
 import {
   BacklogProject,
   BacklogProjectParams,
-  Project,
+  ProjectManager,
   ProjectModule
-} from './project';
-import {IssueModule, BacklogIssueParams, Issue} from './issue';
-import {StatusModule, BacklogStatus, Status} from './status';
+} from './project-manager';
+// import {Issue} from './issue';
+import {StatusModule, BacklogStatus, StatusManager} from './status-manager';
 
-export class Backlog implements StatusModule, ProjectModule, IssueModule {
-  private readonly status: Status;
-  private readonly project: Project;
-  private readonly issue: Issue;
+export class Backlog implements StatusModule, ProjectModule {
+  private readonly statusManager: StatusManager;
+  private readonly projectManager: ProjectManager;
+  // private readonly issue: Issue;
 
   constructor(
     readonly config: {
@@ -19,14 +19,14 @@ export class Backlog implements StatusModule, ProjectModule, IssueModule {
     }
   ) {
     const axios = createAxiosInstance(config.apiKey);
-    this.status = new Status(axios);
-    this.project = new Project(axios);
-    this.issue = new Issue(axios);
+    this.statusManager = new StatusManager(axios);
+    this.projectManager = new ProjectManager(axios);
+    // this.issue = new Issue(axios);
   }
 
   async getStatuses(): Promise<BacklogStatus[]> {
     try {
-      return this.status.getStatuses();
+      return this.statusManager.getStatuses();
     } catch (err) {
       throw new Error(err.response.data.errors[0].message);
     }
@@ -36,7 +36,7 @@ export class Backlog implements StatusModule, ProjectModule, IssueModule {
     params: BacklogProjectParams = {}
   ): Promise<BacklogProject[]> {
     try {
-      return this.project.getProjects(params);
+      return this.projectManager.getProjects(params);
     } catch (err) {
       throw new Error(err.response.data.errors[0].message);
     }
@@ -46,14 +46,14 @@ export class Backlog implements StatusModule, ProjectModule, IssueModule {
     projectKey: string,
     params: BacklogProjectParams = {}
   ): Promise<BacklogProject | undefined> {
-    return this.project.getProjectByProjectKey(projectKey, params);
+    return this.projectManager.getProjectByProjectKey(projectKey, params);
   }
 
-  async getIssues(params: BacklogIssueParams) {
-    try {
-      return this.issue.getIssues(params);
-    } catch (err) {
-      throw new Error(err.response.data.errors[0].message);
-    }
-  }
+  // async getIssues(params: BacklogIssueParams) {
+  //   try {
+  //     return this.issue.getIssues(params);
+  //   } catch (err) {
+  //     throw new Error(err.response.data.errors[0].message);
+  //   }
+  // }
 }

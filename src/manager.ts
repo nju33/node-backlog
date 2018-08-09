@@ -1,5 +1,5 @@
 import {AxiosInstance} from 'axios';
 
-export class Module {
+export class Manager {
   constructor(protected readonly axios: AxiosInstance) {}
 }

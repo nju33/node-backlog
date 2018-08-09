@@ -1,16 +1,16 @@
 import {createAxiosInstance} from './axios';
-import {Status} from './status';
+import {StatusManager} from './status-manager';
 
 describe('issue', () => {
-  let status: Status;
+  let statusManager: StatusManager;
 
   beforeEach(() => {
     const axios = createAxiosInstance('apikey');
-    status = new Status(axios);
+    statusManager = new StatusManager(axios);
   });
 
   it('get 3 Issues with getIssues', async () => {
-    const issues = await status.getStatuses();
+    const issues = await statusManager.getStatuses();
     expect(issues.length).toBe(4);
   });
 });
