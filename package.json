@@ -36,7 +36,7 @@
     "jest": "23.4.2",
     "microbundle": "0.7.0",
     "nock": "9.4.3",
-    "prettier": "1.14.0",
+    "prettier": "1.14.3",
     "ts-jest": "23.0.1",
     "ts-node": "7.0.0",
     "tslint": "5.11.0",
