@@ -26,7 +26,7 @@
     "example.issue": "yarn run-example example/issue.ts"
   },
   "devDependencies": {
-    "@geekcojp/prettier-config": "0.2.2",
+    "@geekcojp/prettier-config": "0.3.0",
     "@geekcojp/tslint-config": "0.2.1",
     "@types/axios": "0.14.0",
     "@types/dotenv": "4.0.3",
