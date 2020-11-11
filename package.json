@@ -35,7 +35,7 @@
     "dotenv": "6.1.0",
     "jest": "23.6.0",
     "microbundle": "0.12.4",
-    "nock": "9.6.1",
+    "nock": "13.0.5",
     "prettier": "1.16.0",
     "ts-jest": "23.10.5",
     "ts-node": "7.0.1",
